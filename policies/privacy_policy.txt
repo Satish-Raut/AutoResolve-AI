@@ -1,0 +1,15 @@
+# STRIDELIFE CORP. - PRIVACY, GDPR & DATA SECURITY POLICY
+
+1. DATA DELETION REQUESTS (GDPR / CCPA)
+Under GDPR and CCPA regulations, customers have the right to request the permanent deletion of their account and all associated personal data (the "Right to be Forgotten").
+- Procedure: The customer must submit a written request from their registered email.
+- Execution: Our security agents must verify the identity and manually wipe the user record from databases. Wiping takes 7 to 10 business days to complete.
+- Audit Trail: A secure hash of the transaction history must be archived for tax compliance, but all identifiable data (name, email, phone, shipping addresses) will be purged.
+
+2. SECURITY VERIFICATION
+No support agent is permitted to share tracking details, credit card records, or billing addresses to a user without validating the following:
+- The ticket was submitted from the official email address attached to the purchase.
+- If submitted from a secondary email, the user must provide the last 4 digits of the card used, the billing zip code, and the order date for verification.
+
+3. ACCOUNT MERGING
+We do not support automatic account merging. If a customer has two separate accounts, they must decide which email they want to keep. We will transfer VIP loyalty points manually and deactivate the secondary email.

@@ -1,0 +1,41 @@
+# 1. Environment Variables & API Secrets (CRITICAL)
+.env
+.env.local
+.env.production
+.env.development
+.env.*
+
+# 2. Local Databases & Persistence Files
+*.db
+*.db-journal
+*.sqlite3
+autoresolve.db
+
+# 3. Node Dependencies & Compiled Frontend Builds
+node_modules/
+dist/
+dist-ssr/
+Frontend/node_modules/
+Frontend/dist/
+
+# 4. Python Compilation Caches & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+venv/
+.venv/
+env/
+.env/
+ActivePython/
+
+# 5. OS & IDE System Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

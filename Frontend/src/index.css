@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+/* Premium Poppins Font Tweak */
+:root {
+  font-family: 'Poppins', sans-serif;
+  
+  /* LIGHT MODE (White - Yellow theme) by default */
+  --bg-base: #f5f5f8;          /* Off-white warm background */
+  --bg-panel: #ffffff;         /* Pure white cards */
+  --bg-panel-heavy: #ffffff;   /* Pure white modal panels */
+  --border-color: #e2e2e9;     /* Clean gray borders */
+  --text-primary: #09090b;     /* Deep matte charcoal black text */
+  --text-secondary: #52525b;   /* Muted gray text */
+  --accent-color: #eab308;     /* Warm vibrant yellow (#eab308) */
+  --accent-hover: #ca8a04;     /* Slightly darker yellow for hover */
+  --accent-glow: rgba(234, 179, 8, 0.12);
+  
+  --bg-grid-color: rgba(9, 9, 11, 0.02); /* Subtle grid overlay */
+  --radial-glow: radial-gradient(circle 400px at 50% 300px, rgba(234, 179, 8, 0.06), transparent);
+}
+
+/* DARK MODE (Charcoal - Glowing Yellow theme) when .dark-theme class is active */
+.dark-theme {
+  --bg-base: #0c0c0e;          /* Deep matte charcoal black */
+  --bg-panel: rgba(20, 20, 22, 0.7); /* Matte translucent dark cards */
+  --bg-panel-heavy: #141416;   /* Matte dark solid modal panels */
+  --border-color: rgba(255, 255, 255, 0.07); /* Thin transparent border */
+  --text-primary: #f4f4f5;     /* Warm white text */
+  --text-secondary: #a1a1aa;   /* Muted slate text */
+  --accent-color: #facc15;     /* Glowing warm yellow */
+  --accent-hover: #eab308;     /* Warm yellow hover */
+  --accent-glow: rgba(250, 204, 21, 0.15);
+  
+  --bg-grid-color: rgba(255, 255, 255, 0.015);
+  --radial-glow: radial-gradient(circle 400px at 50% 300px, rgba(250, 204, 21, 0.06), transparent);
+}
+
+@theme {
+  --color-bg-base: var(--bg-base);
+  --color-bg-panel: var(--bg-panel);
+  --color-bg-panel-heavy: var(--bg-panel-heavy);
+  --color-border-theme: var(--border-color);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-theme: var(--accent-color);
+  --color-accent-theme-hover: var(--accent-hover);
+  --color-accent-theme-glow: var(--accent-glow);
+}
+
+/* Premium dark/light custom panel styles with smooth transition */
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.glass-panel-heavy {
+  background: var(--bg-panel-heavy);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.glow-accent {
+  box-shadow: 0 0 25px var(--accent-glow);
+}
+
+/* Dynamic custom code console scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.35);
+}
+
+/* Glowing text effects */
+.glow-text-green {
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+.glow-text-amber {
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+}
+
+.glow-text-rose {
+  text-shadow: 0 0 10px rgba(244, 63, 94, 0.4);
+}
+
+/* Landing Page Grid Overlay */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, var(--bg-grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bg-grid-color) 1px, transparent 1px);
+  transition: background-image 0.3s;
+}
+
+/* Floating Radial Glow (Landing Hero Background) */
+.radial-glow-indigo {
+  background: var(--radial-glow);
+  transition: background 0.3s;
+}
+
+/* Subtle Hover Scales */
+.hover-glow:hover {
+  box-shadow: 0 0 30px var(--accent-glow);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Flowing Neon Data Stream Animation */
+@keyframes flow-stream {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-flow-stream {
+  background: linear-gradient(90deg, var(--border-color) 25%, var(--accent-color) 50%, var(--border-color) 75%);
+  background-size: 200% 100%;
+  animation: flow-stream 1.5s linear infinite;
+}
