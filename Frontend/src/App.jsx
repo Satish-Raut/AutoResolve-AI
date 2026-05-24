@@ -160,7 +160,9 @@ export default function App() {
 
   // Start Multi-Agent Pipeline
   const handleStartPipeline = async (tkt = null) => {
-    const targetTicket = tkt || selectedTicket;
+    // Safeguard: If tkt is a React Event object (e.g. click event), ignore it
+    const verifiedTkt = (tkt && typeof tkt === 'object' && 'preventDefault' in tkt) ? null : tkt;
+    const targetTicket = verifiedTkt || selectedTicket;
     if (!targetTicket || isProcessing) return;
 
     setIsProcessing(true);
@@ -609,7 +611,7 @@ export default function App() {
         <PipelineConsole 
           logs={logs} 
           isProcessing={isProcessing} 
-          onStartPipeline={selectedTicket.status !== 'Resolved' ? handleStartPipeline : null} 
+          onStartPipeline={selectedTicket.status !== 'Resolved' ? () => handleStartPipeline() : null} 
         />
       ) : (
         <div className="flex-1 flex flex-col items-center justify-center text-text-secondary bg-bg-base/30">
